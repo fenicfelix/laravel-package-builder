@@ -11,20 +11,18 @@ Route::get('/', function () {
 Route::get('/health', function () {
     // $bankCode = null, $branchCode = null, $country = null, $currency = null
     $ncba = new Ncba('07', '000', 'Kenya', 'KES');
-    // echo $ncba->checkApiHealth();
+    echo $ncba->checkApiHealth();
 
-    // echo $ncba->mpesa('Felix Ogucha Nyabwari', date('ymdhis'), 100, '254723293349', 'Other', 'AAA0003');
+    // echo $ncba->mpesa('254723293349', 'Felix Ogucha Nyabwari', 100, 'AAA0003', 'Other', date('ymdhis'));
 
     // echo $ncba->checkTransactionStatus('FTC250124JEQS');
 
-    // echo $ncba->ift('Felix Ogucha', date('ymdhis'), '4376410044', 100, 'Test payment');
+    // echo $ncba->ift('4376410044', 'Felix Ogucha', 100, 'Test payment', date('ymdhis'));
 
-    // echo $ncba->eft('Felix Ogucha', date('ymdhis'), '4376410044', 100, 'Test payment');
+    // echo $ncba->eft('4376410044', 'Felix Ogucha', 100, 'Test payment', date('ymdhis'));
 
-    // echo $ncba->rtgs('Felix Ogucha', '4376410044', 100, '1002', date('ymdhis'), 'Test payment');
+    // echo $ncba->rtgs('4376410044', 'Felix Ogucha', 100, '1002', 'Test payment', date('ymdhis'));
 
     // $ncba = new Ncba('404', '11000', 'Kenya', 'KES'); // Pesalink has a different bank code
-    // echo $ncba->pesalink('Felix Ogucha', date('ymdhis'), '4376410044', 100, 'Test payment');
-
-    //($beneficiaryAccountName, $reference, $account, $amount, $narration)
+    // echo $ncba->pesalink('4376410044', 'Felix Ogucha', 100, 'Test payment', date('ymdhis'));
 });
