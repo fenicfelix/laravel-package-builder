@@ -10,8 +10,6 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "akika/laravel-mpesa": "^1.0",
-        "akika/laravel-mpesa-multivendor": "^0.0.6",
         "akika/laravel-ncba": "dev-main",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9"

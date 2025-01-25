@@ -4,139 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ff99146ab1594744a198e7897ae3797d",
+    "content-hash": "3a0861f258ca18a7f28fdbafaa38e75b",
     "packages": [
-        {
-            "name": "akika/laravel-mpesa",
-            "version": "v1.0.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/akikadigital/laravel-mpesa.git",
-                "reference": "8e9a8c2027d602f6a02c6a3005a7b413cee77f45"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/akikadigital/laravel-mpesa/zipball/8e9a8c2027d602f6a02c6a3005a7b413cee77f45",
-                "reference": "8e9a8c2027d602f6a02c6a3005a7b413cee77f45",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^7.5",
-                "illuminate/http": "^8.0 | ^9.0 | ^10.0 | ^11.0",
-                "illuminate/support": "^8.0 | ^9.0 | ^10.0 | ^11.0",
-                "php": "^8.0|^8.1|^8.2"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "aliases": {
-                        "Mpesa": "Akika\\LaravelMpesa\\Facades\\Mpesa"
-                    },
-                    "providers": [
-                        "Akika\\LaravelMpesa\\MpesaServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Akika\\LaravelMpesa\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Felix Nyabwari",
-                    "email": "fenicfelix@gmail.com"
-                }
-            ],
-            "description": "A cool Mpesa Daraja package for Larave supporting Laravel version 5 and above.",
-            "homepage": "https://github.com/Akika-Digital/laravel-mpesa",
-            "keywords": [
-                "Akika",
-                "daraja",
-                "digital",
-                "laravel",
-                "mpesa",
-                "payment"
-            ],
-            "support": {
-                "issues": "https://github.com/akikadigital/laravel-mpesa/issues",
-                "source": "https://github.com/akikadigital/laravel-mpesa/tree/v1.0.7"
-            },
-            "time": "2024-04-18T11:14:38+00:00"
-        },
-        {
-            "name": "akika/laravel-mpesa-multivendor",
-            "version": "v0.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/akikadigital/laravel-mpesa-multivendor.git",
-                "reference": "1aadce776a141180d040999d48d58831b711d1fb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/akikadigital/laravel-mpesa-multivendor/zipball/1aadce776a141180d040999d48d58831b711d1fb",
-                "reference": "1aadce776a141180d040999d48d58831b711d1fb",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^7.5",
-                "illuminate/http": "^8.0 | ^9.0 | ^10.0 | ^11.0",
-                "illuminate/support": "^8.0 | ^9.0 | ^10.0 | ^11.0",
-                "php": "^8.0|^8.1|^8.2"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "aliases": {
-                        "Mpesa": "Akika\\LaravelMpesaMultivendor\\Facades\\Mpesa"
-                    },
-                    "providers": [
-                        "Akika\\LaravelMpesaMultivendor\\MpesaServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Akika\\LaravelMpesaMultivendor\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Felix Nyabwari",
-                    "email": "fenicfelix@gmail.com"
-                }
-            ],
-            "description": "A Laravel package for integrating multiple Mpesa shortcodes in a single application, allowing seamless Mpesa transactions for multiple vendors",
-            "homepage": "https://github.com/akikadigital/laravel-mpesa-multivendor",
-            "keywords": [
-                "Akika",
-                "daraja",
-                "digital",
-                "laravel",
-                "mpesa",
-                "payment"
-            ],
-            "support": {
-                "issues": "https://github.com/akikadigital/laravel-mpesa-multivendor/issues",
-                "source": "https://github.com/akikadigital/laravel-mpesa-multivendor/tree/v0.0.6"
-            },
-            "time": "2024-06-18T05:25:22+00:00"
-        },
         {
             "name": "akika/laravel-ncba",
             "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "packages/akika/laravel-ncba",
-                "reference": "59e27ea0d8f5adabc020e3696fcec6cfe83aa9dc"
+                "reference": "a9c4aa3c76c120140704b7b85dc4cec92b4d902f"
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.5",
