@@ -17,7 +17,11 @@ Route::get('/health', function () {
 
     // echo $ncba->checkTransactionStatus('FTC250124JEQS');
 
-    // echo $ncba->ift('4376410044', 'Felix Ogucha', 100, 'Test payment', date('ymdhis'));
+    $result = $ncba->ift('4376410044', 'Felix Ogucha', 100, 'Test payment', date('ymdhis'));
+    echo $result;
+
+    $result = json_decode($result, true);
+    echo $result["Response Code"];
 
     // echo $ncba->eft('4376410044', 'Felix Ogucha', 100, 'Test payment', date('ymdhis'));
 
