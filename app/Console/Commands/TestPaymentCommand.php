@@ -33,8 +33,12 @@ class TestPaymentCommand extends Command
         $response = $mwaloni->fetchBalance();
         $this->info('Balance Response: ' . json_encode($response));
 
-        $this->info('----------------- send money to mobile -----------------');
-        $response = $mwaloni->mobile("TEST00012", "+254723293349", 1231, "Test Payment");
+        $this->info('----------------- send money through rtgs -----------------');
+        $response = $mwaloni->rtgs("TEST00019", "12344567790", "Mwaloni Ltd", "01", "KE", "KES", 1290, "Test Payment");
+        $this->info('RTGS Response: ' . json_encode($response));
+
+        /*$this->info('----------------- send money to mobile -----------------');
+        $response = $mwaloni->mobile("TEST00012", "+254723293349", 1220, "Test Payment");
         $this->info('Daraja to Mobile Response: ' . json_encode($response));
 
         $this->info('----------------- send money to till -----------------');
@@ -59,7 +63,7 @@ class TestPaymentCommand extends Command
         $this->info('PesaLink Response: ' . json_encode($response));
 
         $this->info('----------------- send money through rtgs -----------------');
-        $response = $mwaloni->rtgs("TEST00018", "12344567789", "Mwaloni Ltd", "01", "KE", "KES", 1237, "Test Payment");
+        $response = $mwaloni->rtgs("TEST00018", "12344567789", "Mwaloni Ltd", "01", "KE", "KES", 1238, "Test Payment");
         $this->info('RTGS Response: ' . json_encode($response));
 
         $this->info('----------------- get payment status -----------------');
@@ -74,6 +78,6 @@ class TestPaymentCommand extends Command
         $this->info('----------------- send sms -----------------');
         // sendSms($phone, $message)
         $response = $mwaloni->sendSms("+254723293349", "Test SMS");
-        $this->info('Send SMS Response: ' . json_encode($response));
+        $this->info('Send SMS Response: ' . json_encode($response));*/
     }
 }
