@@ -7,11 +7,11 @@ return [
     'sandbox' => [
         'service_id' => env('MWALONI_SANDBOX_SERVICE_ID', 'SRV-00007'),
         'username' => env('MWALONI_SANDBOX_USERNAME', 'test-service'),
-        'password' => env('MWALONI_SANDBOX_PASSWORD', 'w92TrlUMHR'),
+        'password' => env('MWALONI_SANDBOX_PASSWORD', 'fsQPYwgpc0'),
     ],
     'production' => [
         'service_id' => env('MWALONI_SERVICE_ID', 'SRV-00007'),
         'username' => env('MWALONI_USERNAME', 'test-service'),
-        'password' => env('MWALONI_PASSWORD', 'w92TrlUMHR'),
+        'password' => env('MWALONI_PASSWORD', 'fsQPYwgpc0'),
     ],
 ];

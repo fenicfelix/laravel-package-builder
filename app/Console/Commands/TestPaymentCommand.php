@@ -19,7 +19,7 @@ class TestPaymentCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Test Mwaloni Payment Command';
 
     /**
      * Execute the console command.
@@ -33,9 +33,17 @@ class TestPaymentCommand extends Command
         $response = $mwaloni->fetchBalance();
         $this->info('Balance Response: ' . json_encode($response));
 
-        $this->info('----------------- send money through rtgs -----------------');
-        $response = $mwaloni->rtgs("TEST00019", "12344567790", "Mwaloni Ltd", "01", "KE", "KES", 1290, "Test Payment");
-        $this->info('RTGS Response: ' . json_encode($response));
+        // $this->info('----------------- send money through pesalink -----------------');
+        // $response = $mwaloni->pesalink("TEST00102", "12344567789", "Mwaloni Ltd", "01", "NCBA Bank", "KE", "KES", 10, "Test Payment");
+        // $this->info('PesaLink Response: ' . json_encode($response));
+
+        // $this->info('----------------- send money through rtgs -----------------');
+        // $response = $mwaloni->rtgs("TEST00103", "12344567789", "Mwaloni Ltd", "01", "NCBA Bank", "12516652", "KE", "KES", 11, "Test Payment");
+        // $this->info('RTGS Response: ' . json_encode($response));
+
+        // $this->info('----------------- send money through rtgs -----------------');
+        // $response = $mwaloni->rtgs("TEST00019", "12344567790", "Mwaloni Ltd", "01", "KE", "KES", 1290, "Test Payment");
+        // $this->info('RTGS Response: ' . json_encode($response));
 
         /*$this->info('----------------- send money to mobile -----------------');
         $response = $mwaloni->mobile("TEST00012", "+254723293349", 1220, "Test Payment");
@@ -59,11 +67,11 @@ class TestPaymentCommand extends Command
 
         $this->info('----------------- send money through pesalink -----------------');
         // pesalink($orderNumber, $accountNumber, $accountName, $bankCode, $bankCountryCode, $currencyCode, $amount, $description)
-        $response = $mwaloni->pesalink("TEST00017", "12344567789", "Mwaloni Ltd", "01", "KE", "KES", 1236, "Test Payment");
+        $response = $mwaloni->pesalink("TEST00017", "12344567789", "Mwaloni Ltd", "01", "NCBA Bank", "KE", "KES", 1236, "Test Payment");
         $this->info('PesaLink Response: ' . json_encode($response));
 
         $this->info('----------------- send money through rtgs -----------------');
-        $response = $mwaloni->rtgs("TEST00018", "12344567789", "Mwaloni Ltd", "01", "KE", "KES", 1238, "Test Payment");
+        $response = $mwaloni->rtgs("TEST00018", "12344567789", "Mwaloni Ltd", "01", "NCBA Bank", "12516652", "KE", "KES", 1238, "Test Payment");
         $this->info('RTGS Response: ' . json_encode($response));
 
         $this->info('----------------- get payment status -----------------');
