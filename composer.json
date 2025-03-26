@@ -12,6 +12,7 @@
         "php": "^8.2",
         "akika/laravel-mwaloni": "dev-main",
         "akika/laravel-ncba": "dev-main",
+        "akika/laravel-mojo": "dev-main",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9"
     },
@@ -30,7 +31,8 @@
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
             "Akika\\LaravelNcba\\": "packages/akika/laravel-ncba/src/",
-            "Akika\\LaravelMwaloni\\": "packages/akika/laravel-mwaloni/src/"
+            "Akika\\LaravelMwaloni\\": "packages/akika/laravel-mwaloni/src/",
+            "Akika\\Mojo\\": "packages/akika/laravel-mwaloni/src/"
         }
     },
     "autoload-dev": {
@@ -86,6 +88,13 @@
         {
             "type": "path",
             "url": "packages/akika/laravel-mwaloni",
+            "options": {
+            "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/akika/laravel-mojo",
             "options": {
             "symlink": true
             }
