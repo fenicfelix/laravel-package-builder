@@ -27,10 +27,15 @@ class TestPaymentCommand extends Command
     public function handle()
     {
         $this->info('Testing payment command...');
-        $serviceId = "SRV-00002"; // SRV-00002, SRV-00005, SRV-00008
+        // $serviceId = "SRV-00002"; // SRV-00002, SRV-00005, SRV-00008
+        // $username = "juliusci4";
+        // $password = "CbmsD)BP8r";
+        // $apiKey = "2448dbbd07fc1fbc83ed4ae1b99ca4d209e7b64d0dcae4db8ae0bcf6d05a0c33";
+
+        $serviceId = "SRV-00008"; // SRV-00002, SRV-00005, SRV-00008
         $username = "juliusci4";
-        $password = "CbmsD)BP8r";
-        $apiKey = "2448dbbd07fc1fbc83ed4ae1b99ca4d209e7b64d0dcae4db8ae0bcf6d05a0c33";
+        $password = "1CTxVSIKuo"; //"CbmsD)BP8r";
+        $apiKey = "88f54950051c0b0ea5afd1ac45397e53ef8343e307aa51d39ce3759fda866f80"; // "2448dbbd07fc1fbc83ed4ae1b99ca4d209e7b64d0dcae4db8ae0bcf6d05a0c33";
 
         $mwaloni = new Mwaloni($serviceId, $username, $password, $apiKey);
 
@@ -52,8 +57,10 @@ class TestPaymentCommand extends Command
         $response = $mwaloni->fetchBalance();
         $this->info('Balance Response: ' . json_encode($response));
 
+        die;
+
         // $this->info('----------------- send money to mobile -----------------');
-        // $response = $mwaloni->mobile("TEST00070", "+254723293349", 20, "Test Payment");
+        $response = $mwaloni->mobile("TEST00070", "+254723293349", 20, "Test Payment");
         // $this->info('Daraja to Mobile Response: ' . json_encode($response));
 
         // $this->info('----------------- send money to till -----------------');
@@ -69,6 +76,7 @@ class TestPaymentCommand extends Command
         // $this->info('IFT Response: ' . json_encode($response));
 
         // $this->info('----------------- send money to eft -----------------');
+        // eft($apiToken, $amount, $beneficiaryAccountNumber, $beneficiaryBankBic, $beneficiaryName, $currency, $senderAccountNumber, $narration, $senderCountry, $transactionID, $senderCIF)
         // $response = $mwaloni->eft("TEST00061", "12344567789", "Mwaloni Ltd", "01", "Equity Bank", "KE", "EQRYEURL", "Nairobi", 15, "KES", "Test Payment");
         // $this->info('EFT Response: ' . json_encode($response));
 
