@@ -38,12 +38,14 @@ class TestMwaloniCommand extends Command
         $bankName = "Family Bank Ltd";
         $bankCountryCode = "KE";
         $bankCIF = "0070";
-        $address = "Nairobi";
         $amount = 3200;
         $currencyCode = "KES";
         $description = "Ad Hoc";
-        $result = $mwaloni->pesalink($orderNumber, $accountNumber, $accountName, $bankName, $bankCountryCode, $bankCIF, $address, $amount, $currencyCode, $description);
+        $result = $mwaloni->pesalink($orderNumber, $accountNumber, $accountName, $bankName, $bankCountryCode, $bankCIF, $amount, $currencyCode, $description);
 
-        $this->info('RESULT: '.json_encode($result));
+        // $swiftCode = "FAMIKENX";
+        // $result = $mwaloni->rtgs($orderNumber, $accountNumber, $accountName, $bankName, $swiftCode, $bankCountryCode, $amount, $currencyCode, $description);
+
+        $this->info('RESULT: ' . json_encode($result));
     }
 }
