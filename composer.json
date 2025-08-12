@@ -10,9 +10,11 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "akika/laravel-mojo": "dev-main",
+        "akika/laravel-mpesa": "dev-dev",
         "akika/laravel-mwaloni": "dev-main",
         "akika/laravel-ncba": "dev-main",
-        "akika/laravel-mojo": "dev-main",
+        "akika/laravel-coop": "dev-main",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9"
     },
@@ -32,7 +34,9 @@
             "Database\\Seeders\\": "database/seeders/",
             "Akika\\LaravelNcba\\": "packages/akika/laravel-ncba/src/",
             "Akika\\LaravelMwaloni\\": "packages/akika/laravel-mwaloni/src/",
-            "Akika\\Mojo\\": "packages/akika/laravel-mwaloni/src/"
+            "Akika\\LaravelMojo\\": "packages/akika/laravel-mojo/src/",
+            "Akika\\LaravelCoop\\": "packages/akika/laravel-coop/src/",
+            "Akika\\LaravelMpesa\\": "packages/akika/laravel-mpesa/src/"
         }
     },
     "autoload-dev": {
@@ -80,23 +84,34 @@
     "repositories": [
         {
             "type": "path",
+            "url": "packages/akika/laravel-mpesa"
+        },
+        {
+            "type": "path",
             "url": "packages/akika/laravel-ncba",
             "options": {
-            "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "packages/akika/laravel-mwaloni",
             "options": {
-            "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "packages/akika/laravel-mojo",
             "options": {
-            "symlink": true
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/akika/laravel-coop",
+            "options": {
+                "symlink": true
             }
         }
     ]
