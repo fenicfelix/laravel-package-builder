@@ -5,14 +5,14 @@ namespace App\Console\Commands;
 use Akika\LaravelNcba\Ncba;
 use Illuminate\Console\Command;
 
-class TestNcbaCommand extends Command
+class TestNcba extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'app:test-ncba-command';
+    protected $signature = 'app:test-ncba';
 
     /**
      * The console command description.
