@@ -45,7 +45,7 @@ class TestMwaloniCommand extends Command
         $this->info('PESALINK RESULT: '.json_encode($result));
 
         $swiftCode = "FAMIKENX";
-        $result = $mwaloni->rtgs($orderNumber, $accountNumber, $accountName, $bankName, $swiftCode, $bankCountryCode, $amount, $currencyCode, $description);
+        // $result = $mwaloni->rtgs($orderNumber, $accountNumber, $accountName, $bankName, $swiftCode, $bankCountryCode, $amount, $currencyCode, $description);
 
         $this->info('RTGS RESULT: ' . json_encode($result));
     }
