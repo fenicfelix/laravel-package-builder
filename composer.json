@@ -15,6 +15,7 @@
         "akika/laravel-mwaloni": "dev-main",
         "akika/laravel-ncba": "dev-main",
         "akika/laravel-coop": "dev-main",
+        "akika/laravel-weevo": "dev-main",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9"
     },
@@ -110,6 +111,13 @@
         {
             "type": "path",
             "url": "packages/akika/laravel-coop",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/akika/laravel-weevo",
             "options": {
                 "symlink": true
             }
