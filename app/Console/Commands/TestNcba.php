@@ -28,9 +28,14 @@ class TestNcba extends Command
     {
         $this->info('Testing payment command...');
         $this->info('------------ Initialization ------------');
-        $apiKey = "2448dbbd07fc1fbc83ed4ae1b99ca4d209e7b64d0dcae4db8ae0bcf6d05a0c33";
-        $username = "juliusci4";
-        $password = "CbmsD)BP8r";
+
+        // $apiKey = "2448dbbd07fc1fbc83ed4ae1b99ca4d209e7b64d0dcae4db8ae0bcf6d05a0c33";
+        // $username = "juliusci4";
+        // $password = "CbmsD)BP8r";
+
+        $apiKey = "ae63a56e622d4e349b173b532198e7c7";
+        $username = "FukoTPrd";
+        $password = "19YHygoFJ!$^11D=";
         $ncba = new Ncba($apiKey, $username, $password);
 
         try {
