@@ -33,18 +33,22 @@ class TestNcba extends Command
         $password = "CbmsD)BP8r";
         $ncba = new Ncba($apiKey, $username, $password);
 
-        $authenticate = $ncba->authenticate();
-        $this->info('Authenticate: ' . json_encode($authenticate));
+        try {
+            $authenticate = $ncba->authenticate();
+            $this->info('Authenticate: ' . json_encode($authenticate));
 
-        if ($authenticate == null || $authenticate['status'] != '00') {
-            $this->info('Authentication failed');
-            return;
+            if ($authenticate == null || $authenticate['status'] != '00') {
+                $this->info('Authentication failed');
+                return;
+            }
+
+            $token = $authenticate['accessToken'];
+            $this->info('Token: ' . $token);
+        } catch (\Throwable $th) {
+            $this->error('Error: ' . $th->getMessage());
         }
 
-        $token = $authenticate['accessToken'];
-        $this->info('Token: ' . $token);
 
-
-        $this->info('Test is scompleted');
+        $this->info('Test is completed');
     }
 }
